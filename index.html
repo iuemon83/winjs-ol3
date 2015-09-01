@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ja">
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/winjs/4.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="http://openlayers.org/en/v3.7.0/build/ol.js" type="text/javascript"></script>
+    <script src="bundle.js"></script>
+</head>
+
+<body>
+    <div class="basicToolbar" data-win-control="WinJS.UI.ToolBar">
+        <!-- Primary commands -->
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdEdit',
+            label:'edit',
+            section:'primary',
+            type:'button',
+            icon: 'edit',
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdDelete',
+            label:'delete',
+            section:'primary',
+            type:'button',
+            icon: 'delete',
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdFavorite',
+            label:'favorite',
+            section:'primary',
+            type:'toggle',
+            icon: 'favorite',
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdOpenWith',
+            label:'open with',
+            section:'primary',
+            type:'button',
+            icon: 'openfile',
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdDownload',
+            label:'download',
+            section:'primary',
+            type:'button',
+            icon: 'download',
+            onclick: Sample.outputCommand}"></button>
+        <!-- Secondary command -->
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdSettings',
+            label:'settings',
+            section:'secondary',
+            type:'button',
+            onclick: Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.Command" data-win-options="{
+            id:'cmdShare',
+            label:'share',
+            section:'secondary',
+            type:'button',
+            onclick: Sample.outputCommand}"></button>
+    </div>
+    <div id="map" class="map"></div>
+    <!-- <div class="status"></div> -->
+    <div data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: 'Main instruction',
+             primaryCommandText: 'button1',
+             secondaryCommandText: 'button2'
+        }">
+    </div>
+</body>
+
+</html>
